@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data>
+    <group name="length" base="1" def1="1" def2="2">
+        <header>[النظام المتري]</header>
+        <item name="متر" shortName="m"><base>1</base></item>
+        <item name="كيلومتر" shortName="km"><base>1000</base></item>
+        <item name="ديسيمتر" shortName="dm"><base>0.1</base></item>
+        <item name="سنتيمتر" shortName="cm"><base>0.01</base></item>
+        <item name="مليمتر" shortName="mm"><base>0.001</base></item>
+        <item name="ميكرومتر" shortName="μm"><base>1e-6</base></item>
+        <item name="نانومتر" shortName="nm"><base>1e-9</base></item>
+        <item name="بيكومتر" shortName="pm"><base>1e-12</base></item>
+        <item name="سنة ضوئية" shortName="ly"><base>9.4607e+15</base></item>
+
+        <header>[النظام الإمبراطوري]</header>
+        <item name="بوصة" shortName="in"><base>0.0254</base></item>
+        <item name="قدم" shortName="ft"><base>0.3048</base></item>
+        <item name="ياردة" shortName="yd"><base>0.9144</base></item>
+        <item name="ميل بحري" shortName="nmi"><base>1852</base></item>
+        <item name="ميل" shortName="mi"><base>1609.344</base></item>
+    </group>
+    <group name="area" base="0" def1="0" def2="1">
+        <item name="متر مربع" shortName="m²"><base>1</base></item>
+        <item name="كيلومتر مربع" shortName="km²"><base>1000000</base></item>
+        <item name="هكتار" shortName="ha"><base>10000</base></item>
+        <item name="ديسيمتر مربع" shortName="dm²"><base>0.01</base></item>
+        <item name="سنتيمتر مربع" shortName="cm²"><base>0.0001</base></item>
+        <item name="مليمتر مربع" shortName="mm²"><base>0.000001</base></item>
+        <item name="ميل مربع" shortName="mile²"><base>2590002.59</base></item>
+        <item name="فدان" shortName="ac"><base>4046.85</base></item>
+        <item name="قدم مربع" shortName="ft²"><base>0.0929</base></item>
+        <item name="بوصة مربعة" shortName="in²"><base>0.000645</base></item>
+    </group>
+    <group name="volume" base="0" def1="1" def2="2">
+        <header>[النظام المتري]</header>
+        <item name="متر مكعب" shortName="m³"><base>1</base></item>
+        <item name="لتر" shortName="l"><base>0.001</base></item>
+        <item name="مليلتر" shortName="ml"><base>0.000001</base></item>
+        <item name="سنتيمتر مكعب" shortName="cm³"><base>0.000001</base></item>
+        <item name="مليمتر مكعب" shortName="mm³"><base>1e-9</base></item>
+
+        <header>[النظام الإمبراطوري/الأمريكي]</header>
+        <item name="ياردة مكعبة" shortName="yd³"><base>0.7645</base></item>
+        <item name="قدم مكعب" shortName="ft³"><base>0.0283</base></item>
+        <item name="بوصة مكعبة" shortName="in³"><base>0.000016</base></item>
+        <item name="جالون (أمريكي)" shortName="gal"><base>0.003785</base></item>
+        <item name="أونصة سائلة (أمريكية)" shortName="fl oz"><base>0.0000295</base></item>
+    </group>
+    <group name="velocity" base="0" def1="0" def2="1">
+        <item name="متر/ثانية" shortName="m/s"><base>1</base></item>
+        <item name="كيلومتر/ساعة" shortName="km/h"><base>0.2777</base></item>
+        <item name="ميل/ساعة" shortName="mph"><base>0.447</base></item>
+        <item name="عقدة" shortName="knot"><base>0.5144</base></item>
+        <item name="ماخ" shortName="mach"><base>340.3</base></item>
+        <item name="سرعة الضوء" shortName="c"><base>299792458</base></item>
+    </group>
+    <group name="temperature" base="0" def1="0" def2="1">
+        <item name="سيلسيوس" shortName="°C">
+            <base>1</base>
+            <calcRange><minVal>-273.15</minVal></calcRange>
+            <calcType>2</calcType>
+            <calcFormula>
+                <toBenchmark>%val%+273.15</toBenchmark>
+                <fromBenchmark>%val%-273.15</fromBenchmark>
+            </calcFormula>
+        </item>
+        <item name="فهرنهايت" shortName="°F">
+            <calcRange><minVal>-459.67</minVal></calcRange>
+            <calcType>2</calcType>
+            <calcFormula>
+                <toBenchmark>(%val%+459.67)/1.8</toBenchmark>
+                <fromBenchmark>%val%*1.8-459.67</fromBenchmark>
+            </calcFormula>
+        </item>
+        <item name="كلفن" shortName="K"><base>1</base></item>
+    </group>
+    <group name="weight" base="0" def1="0" def2="1">
+        <item name="كيلوجرام" shortName="kg"><base>1</base></item>
+        <item name="جرام" shortName="g"><base>0.001</base></item>
+        <item name="مليجرام" shortName="mg"><base>0.000001</base></item>
+        <item name="طن" shortName="T"><base>1000</base></item>
+        <item name="رطل" shortName="lb"><base>0.4535</base></item>
+        <item name="أونصة" shortName="oz"><base>0.0283</base></item>
+    </group>
+    <group name="time" base="5" def1="0" def2="2">
+        <item name="سنة" shortName="yr"><base>31536000</base></item>
+        <item name="أسبوع" shortName="week"><base>604800</base></item>
+        <item name="يوم" shortName="d"><base>86400</base></item>
+        <item name="ساعة" shortName="h"><base>3600</base></item>
+        <item name="دقيقة" shortName="min"><base>60</base></item>
+        <item name="ثانية" shortName="s"><base>1</base></item>
+        <item name="ملي ثانية" shortName="ms"><base>0.001</base></item>
+    </group>
+    <group name="power" base="0" def1="0" def2="1">
+        <item name="كيلوواط" shortName="kW"><base>1</base></item>
+        <item name="واط" shortName="W"><base>0.001</base></item>
+        <item name="حصان" shortName="hp"><base>0.7457</base></item>
+    </group>
+    <group name="pressure" base="0" def1="0" def2="1">
+        <item name="باسكال" shortName="Pa"><base>1</base></item>
+        <item name="كيلوباسكال" shortName="kPa"><base>1000</base></item>
+        <item name="بار" shortName="bar"><base>100000</base></item>
+        <item name="ضغط جوي" shortName="atm"><base>101325</base></item>
+        <item name="مليمتر زئبق" shortName="mmHg"><base>133.32</base></item>
+        <item name="رطل/بوصة²" shortName="psi"><base>6894.76</base></item>
+    </group>
+</data>

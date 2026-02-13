@@ -1,0 +1,192 @@
+<resources>
+    <!-- Reply Preference -->
+    <string-array name="history_count_entries">
+        <item>10 سجلات</item>
+        <item>20 سجل</item>
+        <item>30 سجل</item>
+        <item>40 سجل</item>
+        <item>50 سجل</item>
+    </string-array>
+
+    <string-array name="history_count_values" translatable="false">
+        <item>10</item>
+        <item>20</item>
+        <item>30</item>
+        <item>40</item>
+        <item>50</item>
+    </string-array>
+
+    <string-array name="computation_accuracy_count_entries">
+        <item>بدون منازل عشرية</item>
+        <item>منزلة عشرية واحدة</item>
+        <item>منزلتان عشريتان</item>
+        <item>3 منازل عشرية</item>
+        <item>5 منازل عشرية</item>
+        <item>6 منازل عشرية</item>
+        <item>7 منازل عشرية</item>
+        <item>8 منازل عشرية</item>
+        <item>9 منازل عشرية</item>
+        <item>10 منازل عشرية</item>
+        <item>15 منزلة عشرية</item>
+        <item>20 منزلة عشرية</item>
+        <item>25 منزلة عشرية</item>
+        <item>30 منزلة عشرية</item>
+    </string-array>
+
+    <string-array name="computation_accuracy_count_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
+        <item>25</item>
+        <item>30</item>
+    </string-array>
+
+
+    <!-- scientific notation Preference -->
+    <string-array name="scientific_notation_max_entries">
+        <item>10^3</item>
+        <item>10^4</item>
+        <item>10^5</item>
+        <item>10^6</item>
+        <item>10^7</item>
+        <item>10^8</item>
+        <item>10^9</item>
+        <item>10^10</item>
+    </string-array>
+
+    <string-array name="scientific_notation_max_values" translatable="false">
+        <item>1000</item>
+        <item>10000</item>
+        <item>100000</item>
+        <item>1000000</item>
+        <item>10000000</item>
+        <item>100000000</item>
+        <item>1000000000</item>
+        <item>10000000000</item>
+    </string-array>
+
+
+    <!-- Functions help -->
+    <string-array name="functions_help_names" translatable="false">
+        <item>sin(x)</item>
+        <item>cos(x)</item>
+        <item>tan(x)</item>
+        <item>arcsin(x)</item>
+        <item>arccos(x)</item>
+        <item>arctan(x)</item>
+        <item>sinh(x)</item>
+        <item>cosh(x)</item>
+        <item>tanh(x)</item>
+        <item>lg(n)</item>
+        <item>ln(n)</item>
+        <item>log(n, a)</item>
+        <item>exp(n)</item>
+
+        <item>abs(x)</item>
+        <item>sqrt(x)</item>
+        <item>cbrt(n)</item>
+        <item>pow(x, n)</item>
+        <item>fact(n)</item>
+        <item>g2d(g)</item>
+        <item>d2g(d)</item>
+        <item>negate(x)</item>
+        <item>hypot(a, b)</item>
+        <item>log1p(n)</item>
+        <item>expm1(x)</item>
+        <item>cell(x)</item>
+        <item>floor(x)</item>
+        <item>fix(d)</item>
+        <item>bin(x)</item>
+        <item>oct(d)</item>
+        <item>dec(x)</item>
+        <item>hex(d)</item>
+        <item>radix(a, b)</item>
+        <item>rand()</item>
+        <item>rnd(a, b)</item>
+    </string-array>
+
+    <string-array name="functions_help_texts">
+        <item>دالة الجيب</item>
+        <item>دالة جيب التمام</item>
+        <item>دالة الظل</item>
+        <item>دالة قوس الجيب</item>
+        <item>دالة قوس جيب التمام</item>
+        <item>دالة قوس الظل</item>
+        <item>دالة الجيب الزائدية</item>
+        <item>دالة جيب التمام الزائدية</item>
+        <item>دالة الظل الزائدية</item>
+        <item>اللوغاريتم العشري</item>
+        <item>اللوغاريتم الطبيعي</item>
+        <item>اللوغاريتم للأساس a</item>
+        <item>الدالة الأسية للأساس e</item>
+        <item>دالة القيمة المطلقة</item>
+        <item>دالة الجذر التربيعي</item>
+        <item>دالة الجذر التكعيبي</item>
+        <item>دالة القوة</item>
+        <item>دالة المضروب</item>
+        <item>تحويل من راديان إلى درجات</item>
+        <item>تحويل من درجات إلى راديان</item>
+        <item>دالة النفي</item>
+        <item>حساب وتر المثلث القائم</item>
+        <item>ln(1 + n)</item>
+        <item>exp(x) ^ -1</item>
+        <item>التقريب للأعلى</item>
+        <item>التقريب للأسفل</item>
+        <item>التقريب لأقرب عدد صحيح</item>
+
+        <item>التحويل إلى ثنائي</item>
+        <item>التحويل إلى ثماني</item>
+        <item>التحويل إلى عشري</item>
+        <item>التحويل إلى ستة عشري</item>
+        <item>تحويل a إلى نظام الأساس b</item>
+
+        <item>توليد رقم عشوائي بين [0, 1)</item>
+        <item>توليد رقم عشوائي بين [a, b)</item>
+    </string-array>
+
+    <!-- Converts help -->
+    <string-array name="converts_texts">
+
+        <item>تحويل الطول</item>
+        <item>تحويل المساحة</item>
+        <item>تحويل الحجم</item>
+        <item>تحويل السرعة</item>
+        <item>تحويل درجة الحرارة</item>
+        <item>تحويل الوزن</item>
+        <item>تحويل الوقت</item>
+        <item>تحويل الطاقة</item>
+        <item>تحويل الضغط</item>
+        <item>تحويل الحرارة</item>
+        <item>تحويل الزوايا</item>
+        <item>تحويل حجم البيانات</item>
+        <item>تحويل العملات</item>
+        <item>تحويل المبلغ إلى نص عربي</item>
+    </string-array>
+    <string-array name="converts_icons" translatable="false">
+        <item>@drawable/menu_icon_conversion_length</item>
+        <item>@drawable/menu_icon_conversion_area</item>
+        <item>@drawable/menu_icon_conversion_volume</item>
+        <item>@drawable/menu_icon_conversion_velocity</item>
+        <item>@drawable/menu_icon_conversion_temprature</item>
+        <item>@drawable/menu_icon_conversion_weight</item>
+        <item>@drawable/menu_icon_conversion_time</item>
+        <item>@drawable/menu_icon_conversion_power</item>
+        <item>@drawable/menu_icon_conversion_pressure</item>
+        <item>@drawable/menu_icon_conversion_energy</item>
+        <item>@drawable/menu_icon_conversion_angle</item>
+        <item>@drawable/menu_icon_conversion_radix</item>
+        <item>@drawable/menu_icon_conversion_currency</item>
+        <item>@drawable/word_figure</item>
+    </string-array>
+
+</resources>
