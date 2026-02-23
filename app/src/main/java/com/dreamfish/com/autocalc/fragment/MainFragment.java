@@ -812,8 +812,10 @@ public class MainFragment extends Fragment {
     Button btn_close = v.findViewById(R.id.btn_cancel);
     Button btn_mode_normal = v.findViewById(R.id.btn_mode_normal);
     Button btn_mode_expanded = v.findViewById(R.id.btn_mode_expanded);
-    Button btn_mode_programmer = v.findViewById(R.id.btn_mode_programmer);;
+    Button btn_mode_programmer = v.findViewById(R.id.btn_mode_programmer);
     Button btn_mode_date_calc = v.findViewById(R.id.btn_mode_date_calc);
+    Button btn_mode_bmi = v.findViewById(R.id.btn_mode_bmi);
+    Button btn_mode_percent = v.findViewById(R.id.btn_mode_percent);
 
     switch (padMode) {
       case PAD_MODE_NORMAL:
@@ -849,6 +851,14 @@ public class MainFragment extends Fragment {
     btn_mode_date_calc.setOnClickListener(view -> {
       dialog.dismiss();
       startActivity(new Intent(getActivity(), DateRangeActivity.class));
+    });
+    btn_mode_bmi.setOnClickListener(view -> {
+      dialog.dismiss();
+      showBMIDialog();
+    });
+    btn_mode_percent.setOnClickListener(view -> {
+      dialog.dismiss();
+      showPercentDialog();
     });
 
     dialog.show();
@@ -904,6 +914,55 @@ public class MainFragment extends Fragment {
 
     dialog.show();
   }
+  public void showBMIDialog() {
+    LayoutInflater inflater = LayoutInflater.from(context);
+    View v = inflater.inflate(R.layout.dialog_bmi, null);
+    AlertDialog dialog = AlertDialogTool.buildCustomBottomPopupDialog(context, v);
+    EditText edit_weight = v.findViewById(R.id.edit_weight);
+    EditText edit_height = v.findViewById(R.id.edit_height);
+    TextView text_result = v.findViewById(R.id.text_bmi_result);
+    TextView text_status = v.findViewById(R.id.text_bmi_status);
+    v.findViewById(R.id.btn_cancel).setOnClickListener(view -> dialog.dismiss());
+    v.findViewById(R.id.btn_calc).setOnClickListener(view -> {
+      try {
+        double w = Double.parseDouble(edit_weight.getText().toString());
+        double h = Double.parseDouble(edit_height.getText().toString()) / 100.0;
+        double bmi = w / (h * h);
+        text_result.setText(resources.getString(R.string.text_bmi_result) + String.format("%.2f", bmi));
+        String status = "";
+        if (bmi < 18.5) status = resources.getString(R.string.text_bmi_underweight);
+        else if (bmi < 25) status = resources.getString(R.string.text_bmi_normal);
+        else if (bmi < 30) status = resources.getString(R.string.text_bmi_overweight);
+        else status = resources.getString(R.string.text_bmi_obese);
+        text_status.setText(resources.getString(R.string.text_bmi_status) + status);
+      } catch (Exception e) {
+        Toast.makeText(context, "يرجى إدخال قيم صحيحة", Toast.LENGTH_SHORT).show();
+      }
+    });
+    dialog.show();
+  }
+
+  public void showPercentDialog() {
+    LayoutInflater inflater = LayoutInflater.from(context);
+    View v = inflater.inflate(R.layout.dialog_percent, null);
+    AlertDialog dialog = AlertDialogTool.buildCustomBottomPopupDialog(context, v);
+    EditText edit_value = v.findViewById(R.id.edit_value);
+    EditText edit_ratio = v.findViewById(R.id.edit_ratio);
+    TextView text_result = v.findViewById(R.id.text_percent_result);
+    v.findViewById(R.id.btn_cancel).setOnClickListener(view -> dialog.dismiss());
+    v.findViewById(R.id.btn_calc).setOnClickListener(view -> {
+      try {
+        double val = Double.parseDouble(edit_value.getText().toString());
+        double ratio = Double.parseDouble(edit_ratio.getText().toString());
+        double res = val * (ratio / 100.0);
+        text_result.setText(resources.getString(R.string.text_percent_result) + String.format("%.2f", res));
+      } catch (Exception e) {
+        Toast.makeText(context, "يرجى إدخال قيم صحيحة", Toast.LENGTH_SHORT).show();
+      }
+    });
+    dialog.show();
+  }
+
   public void showException(Exception e) {
 
     LayoutInflater inflater = LayoutInflater.from(context);

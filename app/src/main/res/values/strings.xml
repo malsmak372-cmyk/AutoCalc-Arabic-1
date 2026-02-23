@@ -45,6 +45,19 @@
     <string name="text_mode_programmer">مبرمج</string>
     <string name="text_mode_date_calc">حساب فرق التاريخ</string>
     <string name="text_mode_conversion">تحويل وحدات</string>
+    <string name="text_mode_bmi">حساب مؤشر كتلة الجسم (BMI)</string>
+    <string name="text_mode_percent">حساب النسبة المئوية</string>
+    <string name="text_bmi_weight">الوزن (كجم)</string>
+    <string name="text_bmi_height">الطول (سم)</string>
+    <string name="text_bmi_result">مؤشر كتلة الجسم: </string>
+    <string name="text_bmi_status">الحالة: </string>
+    <string name="text_bmi_underweight">نقص في الوزن</string>
+    <string name="text_bmi_normal">وزن مثالي</string>
+    <string name="text_bmi_overweight">زيادة في الوزن</string>
+    <string name="text_bmi_obese">سمنة</string>
+    <string name="text_percent_value">القيمة</string>
+    <string name="text_percent_ratio">النسبة (%)</string>
+    <string name="text_percent_result">النتيجة: </string>
 
 
     <string name="text_same_day">نفس اليوم</string>
