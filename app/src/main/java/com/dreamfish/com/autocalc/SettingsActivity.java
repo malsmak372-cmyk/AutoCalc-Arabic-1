@@ -54,12 +54,15 @@ public class SettingsActivity extends AppCompatActivity {
             assert app_about != null;
 
             app_privacy_policy.setOnPreferenceClickListener(preference -> {
-                CommonDialogs.showPrivacyPolicyAndAgreement(this.getActivity(), null);
+                if (getActivity() != null) {
+                    CommonDialogs.showPrivacyPolicyAndAgreement(getActivity(), null);
+                }
                 return true;
             });
             app_check_update.setOnPreferenceClickListener(preference -> {
-                new UpdaterUtils(activity).checkUpdate(false);
-                activity.finish();
+                if (activity != null) {
+                    new UpdaterUtils(activity).checkUpdate(false);
+                }
                 return true;
             });
             app_about.setOnPreferenceClickListener(preference -> {

@@ -99,7 +99,7 @@ public class MainFragment extends Fragment {
         layout_top.fullScroll(ScrollView.FOCUS_DOWN);
         inited = true;
 
-        if(autoCheckUpdate)
+        if(autoCheckUpdate && UpdaterUtils.getInstance() != null)
           UpdaterUtils.getInstance().checkUpdate(true);
 
       }, 1050);
@@ -451,12 +451,6 @@ public class MainFragment extends Fragment {
   }
   private void initCalc() {
     autoCalc = new AutoCalc();
-    //debug functions
-    autoCalc.addCalcFunctionActuatorSolver("test2", 0, false, false,
-            (formula, ulaBuffer, functionName, adians, params) -> {
-              UpdaterUtils.getInstance().askForUpdate();
-              return "";
-            }, "");
   }
 
   //Text
